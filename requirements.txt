@@ -7,4 +7,5 @@ optuna
 mlflow
 catboost
 phik # for correlation matrix
+lightgbm
 
