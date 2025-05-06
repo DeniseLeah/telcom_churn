@@ -1,0 +1,10 @@
+scikit-learn
+xgboost
+seaborn
+matplotlib
+pandas
+optuna
+mlflow
+catboost
+phik # for correlation matrix
+
