@@ -58,9 +58,7 @@ class Data_to_predict(BaseModel): #description of the input data
     """
     Data model for input data.
     """
-    {
-        "data": "[{\"feature1\": 1, \"feature2\": 2}]"
-    }
+    data: str
 #input data in JSON format
 @app.post("/predict") #endpoint for prediction()
 async def predict(dpp: Data_to_predict): #endpoint for prediction
@@ -69,7 +67,7 @@ async def predict(dpp: Data_to_predict): #endpoint for prediction
     """
     # Convert the input data to a DataFrame
     df = pd.read_json(dpp.data, orient='records')
-
+    df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
     # Make predictions
     predictions = model_lr.predict(df)
 
@@ -83,6 +81,7 @@ async def predict_cat(dpp: Data_to_predict): #endpoint for prediction
     """
     # Convert the input data to a DataFrame
     df = pd.read_json(dpp.data, orient='records')
+    df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 
     # Make predictions
     predictions = model_cat.predict(df)
