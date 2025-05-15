@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/974cb6976f37492e935b1a650bf20fa2/artifacts
+end_time: 1747334457220
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: 974cb6976f37492e935b1a650bf20fa2
+run_name: abrasive-mink-398
+run_uuid: 974cb6976f37492e935b1a650bf20fa2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747334457109
+status: 4
+tags: []
+user_id: smalc

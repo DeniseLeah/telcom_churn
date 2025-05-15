@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/1c3297c52d074d86900b02719327da47/artifacts
+end_time: 1747334205133
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: 1c3297c52d074d86900b02719327da47
+run_name: placid-doe-755
+run_uuid: 1c3297c52d074d86900b02719327da47
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747334205054
+status: 4
+tags: []
+user_id: smalc

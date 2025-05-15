@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/283765f731a84b2eb995644b8f654f2e/artifacts
+end_time: 1747334477753
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: 283765f731a84b2eb995644b8f654f2e
+run_name: gaudy-calf-740
+run_uuid: 283765f731a84b2eb995644b8f654f2e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747334466848
+status: 3
+tags: []
+user_id: smalc

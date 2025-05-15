@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/9312f69ecbcb435b89d16b150c3540f2/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: 9312f69ecbcb435b89d16b150c3540f2
+run_name: classy-hawk-981
+run_uuid: 9312f69ecbcb435b89d16b150c3540f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747334660750
+status: 1
+tags: []
+user_id: smalc

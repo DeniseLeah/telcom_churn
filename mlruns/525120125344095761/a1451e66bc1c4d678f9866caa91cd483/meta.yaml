@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/a1451e66bc1c4d678f9866caa91cd483/artifacts
+end_time: 1747334496946
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: a1451e66bc1c4d678f9866caa91cd483
+run_name: stylish-snail-589
+run_uuid: a1451e66bc1c4d678f9866caa91cd483
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747334489244
+status: 4
+tags: []
+user_id: smalc
