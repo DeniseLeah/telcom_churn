@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/c5627e29314d46d297e22602686408ce/artifacts
+end_time: 1747564498965
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: c5627e29314d46d297e22602686408ce
+run_name: mysterious-ram-458
+run_uuid: c5627e29314d46d297e22602686408ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747564489234
+status: 3
+tags: []
+user_id: smalc

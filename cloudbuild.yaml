@@ -1,0 +1,33 @@
+steps:
+  # build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
+        ".",
+      ]
+
+  # push the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
+      ]
+
+  # deploy to Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "run", "deploy", "$_SERVICE_NAME",
+        "--image", "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
+        "--region", "europe-west10",
+        "--platform", "managed",
+        "--allow-unauthenticated",
+        "--port", "8000"            # 👈 add this line (or substitute a $_PORT var)
+      ]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
