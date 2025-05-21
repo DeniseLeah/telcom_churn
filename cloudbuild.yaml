@@ -21,7 +21,7 @@ steps:
   - name: "gcr.io/cloud-builders/gcloud"
     args:
       [
-        "run", "deploy", "$_SERVICE_NAME",
+        "run", "deploy", "$_SERVICE_NAME-$_REPOSITORY",
         "--image", "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
         "--region", "europe-west10",
         "--platform", "managed",
