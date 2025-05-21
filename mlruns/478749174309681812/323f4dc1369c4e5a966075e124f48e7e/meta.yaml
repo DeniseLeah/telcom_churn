@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/478749174309681812/323f4dc1369c4e5a966075e124f48e7e/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '478749174309681812'
+lifecycle_stage: active
+run_id: 323f4dc1369c4e5a966075e124f48e7e
+run_name: calm-boar-466
+run_uuid: 323f4dc1369c4e5a966075e124f48e7e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747848047207
+status: 1
+tags: []
+user_id: smalc

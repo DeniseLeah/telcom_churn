@@ -6,13 +6,12 @@ services:
 variables:
   DOCKER_DRIVER: overlay2
   REGISTRY_IMAGE: us-central1-docker.pkg.dev
-  REPOSITORY: customer_charm
+  REPOSITORY: customer-charm
   SERVICE_NAME: api
   VERSION: 0.1
 
 
 
-  image: us-central1-docker.pkg.dev/sigma-bay-457411-u5/customer_charm/api:0.1
 
 
 stages:

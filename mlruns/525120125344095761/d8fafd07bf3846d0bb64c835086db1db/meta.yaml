@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/d8fafd07bf3846d0bb64c835086db1db/artifacts
+end_time: 1747846913360
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: d8fafd07bf3846d0bb64c835086db1db
+run_name: chill-shrimp-622
+run_uuid: d8fafd07bf3846d0bb64c835086db1db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747846903131
+status: 3
+tags: []
+user_id: smalc
