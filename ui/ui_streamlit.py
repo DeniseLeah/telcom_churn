@@ -18,7 +18,7 @@ if file:
 
 
     url = "https://api-customer-charm-1027262266945.europe-west10.run.app" # URL of the FastAPI endpoint
-    response = requests.post(url, json={"data":df.to_json(orient='records')})
+    response = requests.post(f"{url}/predict", json={"data":df.to_json(orient='records')})
     if response.status_code == 200:
         df["answer of predictions"] = pd.Series(response.json()['predictions'])
     else:

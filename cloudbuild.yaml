@@ -5,7 +5,7 @@ steps:
       [
         "build",
         "-t",
-        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
+        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME_API:$_VERSION_API",
         ".",
       ]
 
@@ -14,7 +14,7 @@ steps:
     args:
       [
         "push",
-        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
+        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME_API:$_VERSION_API",
       ]
 
   # deploy to Cloud Run
@@ -22,12 +22,39 @@ steps:
     args:
       [
         "run", "deploy", "$_SERVICE_NAME-$_REPOSITORY",
-        "--image", "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$_VERSION",
+        "--image", "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME_API:$_VERSION_API",
         "--region", "europe-west10",
         "--platform", "managed",
         "--allow-unauthenticated",
         "--port", "8000"            # 👈 add this line (or substitute a $_PORT var)
       ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME_UI:$_VERSION_UI",
+        ".",
+      ]
 
+  # push the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME_UI:$_VERSION_UI",
+      ]
+
+  # deploy to Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "run", "deploy", "$_SERVICE_NAME-$_REPOSITORY",
+        "--image", "$_REGISTRY_IMAGE/$_PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME_UI:$_VERSION_UI",
+        "--region", "europe-west10",
+        "--platform", "managed",
+        "--allow-unauthenticated",
+        "--port", "8000"            # 👈 add this line (or substitute a $_PORT var)
+      ]
 options:
   logging: CLOUD_LOGGING_ONLY

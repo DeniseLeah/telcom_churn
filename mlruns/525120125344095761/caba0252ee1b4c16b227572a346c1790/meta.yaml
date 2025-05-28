@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/smalc/DataspellProjects/customer_charm/mlruns/525120125344095761/caba0252ee1b4c16b227572a346c1790/artifacts
+end_time: 1747934245165
+entry_point_name: ''
+experiment_id: '525120125344095761'
+lifecycle_stage: active
+run_id: caba0252ee1b4c16b227572a346c1790
+run_name: legendary-wren-733
+run_uuid: caba0252ee1b4c16b227572a346c1790
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747934233269
+status: 3
+tags: []
+user_id: smalc

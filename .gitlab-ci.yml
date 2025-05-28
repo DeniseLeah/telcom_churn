@@ -7,9 +7,10 @@ variables:
   DOCKER_DRIVER: overlay2
   REGISTRY_IMAGE: us-central1-docker.pkg.dev
   REPOSITORY: customer-charm
-  SERVICE_NAME: api
-  VERSION: 0.1
-
+  SERVICE_NAME_API: api
+  VERSION_API: 0.1
+  SEVICE_NAME_UI: ui
+  VERSION_UI: 0.1
 
 
 
@@ -26,6 +27,6 @@ build_deploy:
     - cp $GCP_KEY /tmp/keyfile.json
     - gcloud auth activate-service-account --key-file=/tmp/keyfile.json
     - gcloud config set project $PROJECT_ID
-    - gcloud builds submit --config=cloudbuild.yaml --substitutions=_PROJECT_ID=$PROJECT_ID,_REGISTRY_IMAGE=$REGISTRY_IMAGE,_REPOSITORY=$REPOSITORY,_SERVICE_NAME=$SERVICE_NAME,_VERSION=$VERSION .
+    - gcloud builds submit --config=cloudbuild.yaml --substitutions=_PROJECT_ID=$PROJECT_ID,_REGISTRY_IMAGE=$REGISTRY_IMAGE,_REPOSITORY=$REPOSITORY,_SERVICE_NAME_API=$SERVICE_NAME_API,_VERSION_API=$VERSION_API,_SEVICE_NAME_UI=$SEVICE_NAME_UI,_VERSION_UI=$VERSION_UI .
   only:
     - main
