@@ -9,7 +9,7 @@ variables:
   REPOSITORY: customer-charm
   SERVICE_NAME_API: api
   VERSION_API: 0.1
-  SEVICE_NAME_UI: ui
+  SERVICE_NAME_UI: ui
   VERSION_UI: 0.1
 
 
